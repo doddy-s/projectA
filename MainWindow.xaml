@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectA"
+        xmlns:viewModel="clr-namespace:projectA.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280"
         WindowStyle="None"
@@ -12,9 +13,16 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border Background="#1A1A1A"
             CornerRadius="16">
+        
         <Grid>
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="240"/>
                 <ColumnDefinition/>
@@ -33,41 +41,62 @@
                        FontSize="32"/>
 
             <StackPanel Grid.Row="1">
+
                 <RadioButton Content="Home"
                              Height="58"
                              Style="{StaticResource MenuButtonStyle}"
-                             Margin="20,20,20,0"
-                             IsChecked="True"/>
+                             Margin="20,20,20,20"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
 
                 <RadioButton Content="Discover"
                              Height="58"
                              Style="{StaticResource MenuButtonStyle}"
-                             Margin="20,20,20,0"/>
+                             Margin="20,0,20,20"
+                             Command="{Binding DiscoverViewCommand}"/>
 
                 <RadioButton Content="History"
                              Height="58"
                              Style="{StaticResource MenuButtonStyle}"
-                             Margin="20,20,20,0"/>
+                             Margin="20,0,20,20"/>
 
                 <RadioButton Content="Setting"
                              Height="58"
                              Style="{StaticResource MenuButtonStyle}"
-                             Margin="20,20,20,0"/>
+                             Margin="20,0,20,20"/>
 
                 <RadioButton Name="ExitButton"
                              Content="Exit"
                              Height="58"
                              Style="{StaticResource MenuButtonStyle}"
-                             Margin="20,20,20,0" Click="ExitButton_Click"/>
+                             Margin="20,190,20,0" Click="ExitButton_Click"/>
+                
             </StackPanel>
 
-            <DockPanel Grid.Column="1">
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal"
+                        Margin="20">
+                
                 <TextBox Width="920" Height="40"
                          VerticalAlignment="Center"
                          HorizontalAlignment="Left"
-                         Margin="20,0,0,0"
+                         Margin="0,0,20,0"
                          Style="{StaticResource TextBoxStyle}"/>
-            </DockPanel>
+
+                <Ellipse Height="50" Width="50">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/Image/pp.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+            </StackPanel>
+
+            <ContentControl Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="20"
+                                Content="{Binding CurrentView}"/>
+
         </Grid>
     </Border>
+    
 </Window>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="projectA.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:projectA.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1020"
+             Background="Transparent">
+    <StackPanel>
+        <Label Width="920" Height="40"
+               Content="Highlights"
+               FontFamily="/Font/#NTR"
+               FontSize="20"
+               Foreground="White"
+               Margin="0,0,0,40"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Rectangle Width="920" Height="460"
+                       Margin="0,0,20,0">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Image/a1.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Button Width="50" Height="50"
+                    Content="NEXT"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -29,5 +29,18 @@ namespace projectA
         {
             Close();
         }
+        /*
+        Ellipse YourEllipseName = new Ellipse
+        {
+            Height = 50,
+            Width = 50,
+            StrokeThickness = 0,
+            Fill = new ImageBrush
+            {
+                Stretch = Stretch.Uniform,
+                ImageSource = new BitmapImage(new Uri("YOUR IMAGE SOURCE HERE"))
+            }
+        };
+        */
     }
 }
