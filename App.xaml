@@ -11,6 +11,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Style/MenuButtonStyle.xaml"/>
                 <ResourceDictionary Source="Style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Style/RoundedButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">

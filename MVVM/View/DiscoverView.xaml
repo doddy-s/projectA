@@ -7,71 +7,51 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1020"
              Background="Transparent">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal"
-                    Margin="20, 20, 20, 10">
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+        <Label Content="Anime Found"
+               FontFamily="/Font/#NTR"
+               FontSize="16"
+               Foreground="White"
+               Margin="20,0,0,0"/>
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel HorizontalAlignment="Center">
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+                <Button Width="210" Height="300"
+                    Margin="20">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Image/a0.jpg"/>
+                    </Button.Background>
+                </Button>
 
-        </StackPanel>
+                <Button Width="210" Height="300"
+                    Margin="20">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Image/a1.jpg"/>
+                    </Button.Background>
+                </Button>
 
-        <StackPanel Orientation="Horizontal"
-                    Margin="20, 20, 20, 10">
+                <Button Width="210" Height="300"
+                    Margin="20">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Image/a0.jpg"/>
+                    </Button.Background>
+                </Button>
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+                <Button Width="210" Height="300"
+                    Margin="20">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Image/a1.jpg"/>
+                    </Button.Background>
+                </Button>
 
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
-
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
-
-            <Rectangle Width="214" Height="285"
-                       Margin="0,0,20,0">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="/Image/a0.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
-
-        </StackPanel>
-        </StackPanel>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
 </UserControl>

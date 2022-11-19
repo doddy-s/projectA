@@ -55,6 +55,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mpv.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Mpv.NET.1.2.0\lib\netstandard2.0\Mpv.NET.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -101,6 +104,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Style\RoundedButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\TextBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +142,8 @@
     </EmbeddedResource>
     <Resource Include="Font\NTR.ttf" />
     <Resource Include="Font\Valorant.ttf" />
+    <None Include="lib\ytdl_hook.lua" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,8 +157,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\a0.jpg" />
-    <Resource Include="Image\a1.png" />
     <Resource Include="Image\pp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\a1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\mpv-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\youtube-dl.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
